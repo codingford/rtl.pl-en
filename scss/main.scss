@@ -1,0 +1,217 @@
+@import "../css/normalize.css";
+@import "../css/settings.css";
+
+$main-color: #F9AC14;
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-image: url(../media/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;;
+    background-position: center center;
+    position: relative;
+}
+video {
+    width: 100%;
+}
+.video {
+    max-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    h2, h3 {
+        position: absolute;
+        border-left: 5px solid $main-color;
+        padding-left: 15px;
+        z-index: 5;
+        left: 20%;
+    }
+    h2 {
+        top: 35%;
+    }
+    .divider {
+        height: 2px;
+        width: 120px;
+        position: absolute;
+        z-index: 5;
+        left: 22%;
+        top: 50%;
+        background-color: $main-color;
+    }
+    h3 {
+        top: 50%;
+        color: #F6F6F6;
+    }
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-basis: 50%;
+        align-items: center;
+        .lang-wrap {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: #F6F6F6;
+        img {
+            padding: 5px;
+        }
+        .eng {
+            padding-top: 8px;
+        }
+    }
+    a[href^="tel:"], a[href^="mailto:"] {
+        padding: 5px;
+        font-size: 25px;
+    }
+}
+
+h2 {
+    font-size: 46px;
+       
+}
+h3 {
+    font-size: 35px;
+}
+main {
+    padding: 10px;
+    h3, h4, h5 {
+        text-align: center;
+    }
+    h4 {
+        font-size: 32px;
+    }
+    li {
+        list-style: disc;
+    }
+    .img-wrapper {
+        object-position: center;
+        object-fit: cover;
+        overflow: hidden;
+        max-height: 50vh;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+    }
+    p, li {
+        font-size: 20px;
+        color: #1a1a18;
+        line-height: 150%;
+        text-align: justify;
+    }
+    ul, li {
+        list-style: disc;
+    }
+    .clients {
+        display: flex;
+        background-color: $main-color;
+        max-height: 100px;
+        height: 100%;
+    }
+    .client {
+        display: flex!important;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        overflow: hidden;
+        img {
+            margin: 10px 0 5px;
+            height: 100%;
+            max-height: 60px;
+        }
+    }
+}
+footer {
+    background-color: #00000099;
+    width: 100%;
+    font-size: 26px;
+    line-height: 150%;
+    ul,li{
+        list-style: none;
+        padding: 0;
+    }
+    .footer-wrapper {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contacts, .contact-form {
+        box-sizing: border-box;    
+        max-width: 50%;
+        padding: 10px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        input, textarea {
+            margin-bottom: 3px;
+        }
+    }
+}
+@media (hover: hover) {
+    a:hover,
+    .submit:hover {
+        color: $main-color;
+        cursor: pointer;
+    }
+  }
+@media screen and (max-width: 1141px) {
+    .divider,
+    .video h3 {
+        display: none;
+    }
+}
+@media screen and (max-width: 771px) {
+    footer .footer-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footer-wrapper .contacts,
+    footer .footer-wrapper .contact-form {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 430px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .video h2,
+    .logow {
+        display: none;
+    }
+    .logo {
+        display: block;
+    }
+}
+@media screen and (min-width: 431px) {
+   .logo {
+        display: none;
+    }
+}
+
+
